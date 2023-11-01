@@ -11,9 +11,14 @@ block content
           { elephant_Habitat: 'Desert', elephant_Weight: 5000, elephant_Lifespan: '70 years', elephant_TuskLength: 6 },
           { elephant_Habitat: 'Wetland', elephant_Weight: 3000, elephant_Lifespan: '73 years', elephant_TuskLength: 3 }
         ]
-      each item in results
-        .col-sm-2
+      each item, index in results
+        .col-sm-2(onclick=`buy(${index})`)
           p elephant_Habitat: #{item.elephant_Habitat}
           p elephant_Weight: #{item.elephant_Weight}
           p elephant_Lifespan: #{item.elephant_Lifespan}
           p elephant_TuskLength: #{item.elephant_TuskLength}
+
+  script.
+    function buy(index){
+      alert(`You purchased item ${index}.`);
+    }
