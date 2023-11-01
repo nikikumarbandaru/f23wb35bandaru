@@ -13,10 +13,10 @@ block content
         ]
       each item, index in results
         .col-sm-2(onclick=`buy(${index})`)
-          p elephant_Habitat: #{item.elephant_Habitat}
-          p elephant_Weight: #{item.elephant_Weight}
-          p elephant_Lifespan: #{item.elephant_Lifespan}
-          p elephant_TuskLength: #{item.elephant_TuskLength}
+          div elephant_Habitat: #{item.elephant_Habitat}
+          div elephant_Weight: #{item.elephant_Weight}
+          div elephant_Lifespan: #{item.elephant_Lifespan}
+          div elephant_TuskLength: #{item.elephant_TuskLength}
 
   script.
     function buy(index){
